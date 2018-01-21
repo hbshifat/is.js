@@ -3,7 +3,10 @@
 	typeof exports == 'object' ? module.exports = factory : window.is = factory();
 	
 })(window != 'undefined' ? window : this, () => {
-	let availableTypes = "Number Array Object String Null Undefined Function".split(' '),
+
+	'use strict';
+	
+	let availableTypes = 'Array Object String Date RegExp Function Boolean Number Null Undefined'.split(' '),
 		is = {},
 		type = function() {
 			return Object.prototype.toString.call(this).slice(8,-1);
