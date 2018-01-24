@@ -1,7 +1,9 @@
-# is.js
-It actually help to check js different type. With js buildin 'typeof' operator,we can not check the real type.
+![alt text](https://image.ibb.co/cFayKG/is_1.jpg)
 
-#Example :
+
+It actually help to check js different data type. With 'typeof' operator,we can not check the real type.
+
+### Example :
 
 ```
 let obj = {},
@@ -36,5 +38,21 @@ just type 'is.it([])'. It return the exact type.
 is.it([1,2,3,4]) // "Array"
 is.it({}) // "Object"
 is.it(function(){}) // "Function"
-is.it(/\d+/g) //Regex
+is.it(/\d+/g) //"Regex"
+is.it(1) //"Number"
+is.it(null) //"Null"
+is.it(new Date()) //"Date"
+
+```
+
+If you want to logically check the type, then
+
+```
+is.itArray([]); // true
+is.itObject({}); //true
+is.itNumber(1); //true
+is.itRegExp(/\d+/g); //true
+is.itUndefined(); //true
+is.itDate(new Date()) //true
+
 ```
